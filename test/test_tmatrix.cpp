@@ -63,14 +63,12 @@ TEST(TDynamicMatrix, can_set_and_get_element)
 TEST(TDynamicMatrix, throws_when_set_element_with_negative_index)
 {
     TDynamicMatrix<int> m(3);
-    // вызовем at с "отрицательным" индексом (как в тестах для вектора)
     EXPECT_ANY_THROW(m[0].at(-1));
 }
 
 TEST(TDynamicMatrix, throws_when_set_element_with_too_large_index)
 {
     TDynamicMatrix<int> m(3);
-    // допустимые индексы 0..2, индекс 3 должен бросить
     EXPECT_ANY_THROW(m[0].at(m.size()));
 }
 

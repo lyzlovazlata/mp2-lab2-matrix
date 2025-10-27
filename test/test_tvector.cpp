@@ -190,7 +190,6 @@ TEST(TDynamicVector, can_subtract_vectors_with_equal_size)
 	v1[0] = 1; v1[1] = 2;
 	v2[0] = 3; v2[1] = 4;
 	v2 = v2 - v1;
-
 	EXPECT_EQ(2, v2[0]);
 	EXPECT_EQ(2, v2[1]);
 }
